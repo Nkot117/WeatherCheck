@@ -38,6 +38,7 @@
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="25dp"
         android:text="現在地の天気の情報を取得する"
+        android:onClick="getWeatherInformation"
         app:layout_constraintTop_toBottomOf="@+id/weather_info_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
