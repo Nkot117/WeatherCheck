@@ -23,6 +23,7 @@
             android:textSize="30sp" />
 
         <ImageView
+            android:id="@+id/weather_image"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
