@@ -89,9 +89,22 @@ class MainActivity : AppCompatActivity() {
         val rootJSON = JSONObject(result)
         val weatherJSONArray = rootJSON.getJSONArray("weather")
         val weatherJSON = weatherJSONArray.getJSONObject(0)
-
         val weather = weatherJSON.getString("main")
         val icon = weatherJSON.getString("icon")
+        when(icon.substring(0,2)){
+            "01","02" -> {
+                binding.weatherImage.setImageResource(R.drawable.weather_sun)
+            }
+            "03","04" ->{
+                binding.weatherImage.setImageResource(R.drawable.weather_cloud)
+            }
+            "09","10","11","50" ->{
+                binding.weatherImage.setImageResource(R.drawable.weather_rain)
+            }
+            "13" -> {
+                binding.weatherImage.setImageResource(R.drawable.weather_snow)
+            }
+        }
         Log.d("APP_DEBUG","${weather} : ${icon}")
         Log.d("APP_DEBUG","レスポンス処理終了")
     }

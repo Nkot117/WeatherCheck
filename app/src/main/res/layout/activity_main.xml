@@ -27,6 +27,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:contentDescription="天気の写真"
             android:src="@drawable/weather_cloud" />
     </LinearLayout>
